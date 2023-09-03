@@ -7,7 +7,7 @@ module Zoom
 
       # List all the scheduled meetings on Zoom.
       get 'meeting_list', '/users/:user_id/meetings',
-        permit: %i[type page_size next_page_token page_number]
+        permit: %i[type page_size next_page_token page_number from to]
 
       # Create a meeting on Zoom, return the created meeting URL
       post 'meeting_create', '/users/:user_id/meetings',
